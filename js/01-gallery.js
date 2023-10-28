@@ -28,9 +28,3 @@ gallery.addEventListener('click', (event) => {
   }
 });
 
-import * as basicLightbox from 'basiclightbox'
-
-basicLightbox.create(`
-  <img src="${largeImageUrl}" alt="">
-`).show();
-
