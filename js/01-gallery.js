@@ -28,8 +28,6 @@ function onGalleryItemClick(event) {
 
   if (event.target.classList.contains('gallery__image')) {
     const largeImageUrl = event.target.parentElement.href;
-
-    console.log('URL великого зображення:', largeImageUrl);
   }
 }
 
