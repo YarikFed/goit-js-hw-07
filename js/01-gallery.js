@@ -30,11 +30,6 @@ gallery.addEventListener('click', (event) => {
 
 import * as basicLightbox from 'basiclightbox'
 
-const instance = basicLightbox.create(`
-    <img src="${largeImageUrl}" width="800" height="600" alt="${item.description}">
-`)
-
-instance.show()
 
 gallery.addEventListener('click', (event) => {
   event.preventDefault();
