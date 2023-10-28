@@ -1,5 +1,5 @@
 import { galleryItems } from './gallery-items.js';
-// Change code below this line
+
 const galleryContainer = document.querySelector('.gallery');
 
 function renderGalleryItem(item) {
@@ -10,25 +10,10 @@ function renderGalleryItem(item) {
   link.classList.add('gallery__link');
   link.href = item.original;
   link.setAttribute('data-lightbox', 'gallery');
-  link.innerHTML = `<img class="gallery__image" src="${galleryItems.preview}" alt="${galleryItems.description}" />`;
+  link.innerHTML = `<img class="gallery__image" src="${item.preview}" alt="${item.description}" />`;
 
   galleryItem.appendChild(link);
   return galleryItem;
-}
-
-galleryItems.forEach((item) => {
-  const galleryItem = renderGalleryItem(item);
-  galleryContainer.appendChild(galleryItem);
-});
-
-galleryContainer.addEventListener('click', onGalleryItemClick);
-
-function onGalleryItemClick(event) {
-  event.preventDefault();
-
-  if (event.target.classList.contains('gallery__image')) {
-    const largeImageUrl = event.target.parentElement.href;
-  }
 }
 
 // import * as basicLightbox from 'basiclightbox'
