@@ -19,12 +19,5 @@ galleryItems.forEach((item) => {
   gallery.appendChild(galleryItem);
 });
 
-gallery.addEventListener('click', (event) => {
-  const clickedElement = event.target;
 
-  if (clickedElement.tagName === 'IMG') {
-    const largeImageUrl = clickedElement.parentElement.href;
-    console.log(largeImageUrl);
-  }
-});
 
