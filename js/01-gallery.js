@@ -19,3 +19,19 @@ galleryItems.forEach((item) => {
   gallery.appendChild(galleryItem);
 });
 
+gallery.addEventListener('click', (event) => {
+  const clickedElement = event.target;
+
+  if (clickedElement.tagName === 'IMG') {
+    const largeImageUrl = clickedElement.parentElement.href;
+    console.log(largeImageUrl);
+  }
+});
+
+import * as basicLightbox from 'basiclightbox'
+
+const instance = basicLightbox.create(`
+    <img src="${largeImageUrl}" width="800" height="600" alt="${item.description}">
+`)
+
+instance.show()
