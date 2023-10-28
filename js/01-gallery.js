@@ -36,7 +36,7 @@ function onGalleryItemClick(event) {
 import * as basicLightbox from 'basiclightbox'
 
 const instance = basicLightbox.create(`
-    <img src="${item.original}" width="800" height="600" alt="${item.description}">
+    <img src="${galleryItems.original}" width="800" height="600" alt="${galleryItems.description}">
 `)
 
 instance.show()
