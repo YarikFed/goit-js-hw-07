@@ -30,19 +30,9 @@ gallery.addEventListener('click', (event) => {
 
 import * as basicLightbox from 'basiclightbox'
 
+const instance = basicLightbox.create(`
+    <img src="${largeImageUrl}" width="800" height="600" alt="">
+`)
 
-gallery.addEventListener('click', (event) => {
-  event.preventDefault();
+instance.show()
 
-  const clickedElement = event.target;
-
-  if (clickedElement.tagName === 'IMG') {
-    const largeImageUrl = clickedElement.parentElement.href;
-
-    const modal = basicLightbox.create(`
-      <img src="${largeImageUrl}" alt="${item.description}">
-    `);
-
-    modal.show();
-  }
-});
