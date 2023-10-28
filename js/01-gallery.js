@@ -10,7 +10,7 @@ function renderGalleryItem(item) {
   link.classList.add('gallery__link');
   link.href = item.original;
   link.setAttribute('data-lightbox', 'gallery');
-  link.innerHTML = `<img class="gallery__image" src="${item.preview}" alt="${item.description}" />`;
+  link.innerHTML = `<img class="gallery__image" src="${galleryItems.preview}" alt="${galleryItems.description}" />`;
 
   galleryItem.appendChild(link);
   return galleryItem;
