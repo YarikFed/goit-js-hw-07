@@ -1,5 +1,4 @@
 import { galleryItems } from './gallery-items.js';
-import basicLightbox from 'basiclightbox';
 // Change code below this line
 const galleryContainer = document.querySelector('.gallery');
 
@@ -34,17 +33,12 @@ function onGalleryItemClick(event) {
   }
 }
 
-galleryItems.forEach((item) => {
-  const galleryItem = renderGalleryItem(item);
-  galleryContainer.appendChild(galleryItem);
+import * as basicLightbox from 'basiclightbox'
 
-  galleryItem.addEventListener('click', () => {
-    const instance = basicLightbox.create(
-      `<img src="${item.original}" alt="${item.description}">`
-    );
+const instance = basicLightbox.create(`
+    <img src="assets/images/image.png" width="800" height="600">
+`)
 
-    instance.show();
-  });
-});
+instance.show()
 
 console.log(galleryItems);
