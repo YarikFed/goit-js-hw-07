@@ -1,27 +1,37 @@
 import { galleryItems } from './gallery-items.js';
 
-const galleryContainer = document.querySelector('.gallery');
+const gallery = document.querySelector('.gallery');
 
-function renderGalleryItem(item) {
-  const galleryItem = document.createElement('li');
-  galleryItem.classList.add('gallery__item');
+function renderGallery() {
+ galleryItems.forEach((item) => {
+    const galleryItem = document.createElement('div');
+    galleryItem.classList.add('gallery-item');
 
-  const link = document.createElement('a');
-  link.classList.add('gallery__link');
-  link.href = item.original;
-  link.setAttribute('data-lightbox', 'gallery');
-  link.innerHTML = `<img class="gallery__image" src="${item.preview}" alt="${item.description}" />`;
+    const preview = document.createElement('img');
+    preview.classList.add('gallery-item-preview');
+    preview.src = item.preview;
+    preview.alt = item.description;
 
-  galleryItem.appendChild(link);
-  return galleryItem;
+    const original = document.createElement('img');
+    original.classList.add('gallery-item-original');
+    original.src = item.original;
+    original.alt = item.description;
+
+    const description = document.createElement('div');
+    description.classList.add('gallery-item-description');
+
+    const paragraph = document.createElement('p');
+    paragraph.textContent = item.description;
+
+    description.appendChild(paragraph);
+    galleryItem.appendChild(preview);
+    galleryItem.appendChild(original);
+    galleryItem.appendChild(description);
+
+    gallery.appendChild(galleryItem);
+ });
 }
 
-// import * as basicLightbox from 'basiclightbox'
-
-// const instance = basicLightbox.create(`
-//     <img src="${galleryItems.original}" width="800" height="600" alt="${galleryItems.description}">
-// `)
-
-// instance.show()
+renderGallery();
 
 console.log(galleryItems);
