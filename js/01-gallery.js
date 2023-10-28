@@ -33,12 +33,12 @@ function onGalleryItemClick(event) {
   }
 }
 
-import * as basicLightbox from 'basiclightbox'
+// import * as basicLightbox from 'basiclightbox'
 
-const instance = basicLightbox.create(`
-    <img src="${galleryItems.original}" width="800" height="600" alt="${galleryItems.description}">
-`)
+// const instance = basicLightbox.create(`
+//     <img src="${galleryItems.original}" width="800" height="600" alt="${galleryItems.description}">
+// `)
 
-instance.show()
+// instance.show()
 
 console.log(galleryItems);
