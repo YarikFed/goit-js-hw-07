@@ -18,22 +18,3 @@ galleryItems.forEach((item) => {
   galleryItem.appendChild(galleryLink);
   gallery.appendChild(galleryItem);
 });
-
-import * as basicLightbox from 'basiclightbox'
-
-gallery.addEventListener('click', (event) => {
-  event.preventDefault();
-
-  const clickedElement = event.target;
-
-  if (clickedElement.tagName === 'IMG') {
-    const largeImageUrl = clickedElement.parentElement.href;
-
-    const modal = basicLightbox.create(`
-      <img src="${largeImageUrl}" alt="">
-    `);
-
-    modal.show();
-  }
-});
-
