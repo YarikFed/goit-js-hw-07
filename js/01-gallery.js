@@ -19,3 +19,17 @@ galleryItems.forEach((item, index) => {
   galleryItem.appendChild(galleryLink);
   gallery.appendChild(galleryItem);
 });
+
+// gallery.addEventListener('click', (event) => {
+//   event.preventDefault();
+//   const target = event.target;
+
+//   if (target.classList.contains('gallery__image')) {
+//     const largeImageUrl = galleryItems.find((item) => item.preview === target.src).original;
+//     openImageModal(largeImageUrl);
+//   }
+// });
+
+// function openImageModal(imageUrl) {
+//   window.open(imageUrl, '_blank');
+// };
