@@ -1,7 +1,8 @@
 import { galleryItems } from './gallery-items.js';
+
 const gallery = document.querySelector('.gallery');
 
-galleryItems.forEach((item) => {
+galleryItems.forEach((item, index) => {
   const galleryItem = document.createElement('li');
   galleryItem.classList.add('gallery__item');
 
