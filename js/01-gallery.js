@@ -45,21 +45,3 @@ function onImageClick(evt) {
 function blockStandartAction(evt) {
   evt.preventDefault();
 }
-// gallery.addEventListener('click', (event) => {
-//   event.preventDefault();
-//   const target = event.target;
-
-//   if (target.classList.contains('gallery__image')) {
-//     const largeImageUrl = galleryItems.find((item) => item.preview === target.src).original;
-//     openImageModal(largeImageUrl);
-//   }
-// });
-
-// function openImageModal(imageUrl) {
-//   window.open(imageUrl, '_blank');
-// };
-
-//  const instance = basicLightbox.create(`
-//       <img src="${largeImageUrl}" width="800" height="600">
-//     `);
-//     instance.show();
